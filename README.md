@@ -1,9 +1,10 @@
 ## What
 
 An Eventmachine-compatible wrapper for the stathat api
-(http://stathat.com), built on top of em-http-request.
+(http://stathat.com), built on top of
+![em-http-request](https://github.com/igrigorik/em-http-request).
 
-+NOTE:+ Currently, only the EZ api is supported.
+**NOTE:** Currently, only the EZ api is supported.
 
 ## Usage
 
@@ -12,7 +13,7 @@ Configure your settings:
 ```ruby
 EM::StatHat.config do |c|
   c.ukey  = 'your unique user key'
-  c.email = 'user@example.com' # for sending stats for the EZ api
+  c.email = 'user@example.com' # for sending stats via the EZ api
 end
 ```
 
@@ -35,5 +36,10 @@ EM::StatHat.new.ez_count('Users Created', 1) # defaults to 1
 #### Values
 
 ```ruby
-EM::StatHat.new.ez_value('User Agent', 123)
+EM::StatHat.new.ez_value('some metric', 123)
 ```
+
+## Reference
+
+* ![stathat](https://github.com/patrickxb/stathat)
+* ![em-http-request](https://github.com/igrigorik/em-http-request).
