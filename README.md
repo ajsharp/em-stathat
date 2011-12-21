@@ -2,7 +2,7 @@
 
 An Eventmachine-compatible wrapper for the stathat api
 (http://stathat.com), built on top of
-![em-http-request](https://github.com/igrigorik/em-http-request).
+[em-http-request](https://github.com/igrigorik/em-http-request).
 
 **NOTE:** Currently, only the EZ api is supported.
 
@@ -41,5 +41,5 @@ EM::StatHat.new.ez_value('some metric', 123)
 
 ## Reference
 
-* ![stathat](https://github.com/patrickxb/stathat)
-* ![em-http-request](https://github.com/igrigorik/em-http-request).
+* [stathat](https://github.com/patrickxb/stathat)
+* [em-http-request](https://github.com/igrigorik/em-http-request).
