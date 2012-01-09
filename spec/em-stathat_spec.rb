@@ -1,5 +1,10 @@
 require 'spec_helper'
 
+describe EM::Stathat do
+  subject { EM::Stathat }
+  it { should == EM::StatHat }
+end
+
 describe EM::StatHat, '.config' do
   before do
     EM::StatHat.config { } # reset the config

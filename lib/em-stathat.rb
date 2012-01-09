@@ -97,4 +97,6 @@ module EventMachine
       EventMachine::HttpRequest.new(@base_uri + endpoint).post(:body => opts)
     end
   end
+
+  Stathat = StatHat
 end
