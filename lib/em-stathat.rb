@@ -94,17 +94,7 @@ module EventMachine
 
     # Return a deferrable object
     def request(endpoint, opts)
-      req = EventMachine::HttpRequest.new(@base_uri + endpoint).post(:body => opts)
-      req.errback {
-        $stderr.puts "An error occurred communicating with #{@base_uri}!"
-      }
-
-      req.callback {
-        if config.debug
-          $stderr.puts "#{req.response_header.status}: #{req.response}"
-        end
-      }
-      req
+      EventMachine::HttpRequest.new(@base_uri + endpoint).post(:body => opts)
     end
   end
 end
