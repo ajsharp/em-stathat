@@ -1,3 +1,5 @@
+[![Build Status](http://travis-ci.org/ajsharp/em-stathat.png)](http://travis-ci.org/ajsharp/em-stathat)
+
 ## What
 
 An Eventmachine-compatible wrapper for the stathat api
