@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/ajsharp/em-stathat"
   s.summary     = %q{An EventMachine-compatible async wrapper for the stathat api.}
   s.description = %q{Essentially a clone of the normal stathat gem, only for use with EventMachine.}
+  s.license     = "MIT"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {spec,features}/*`.split("\n")

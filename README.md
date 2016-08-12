@@ -45,3 +45,8 @@ EM::StatHat.new.ez_value('some metric', 123)
 
 * [stathat](https://github.com/patrickxb/stathat)
 * [em-http-request](https://github.com/igrigorik/em-http-request).
+
+## Copyright
+
+Copyright (c) 2011-2012 Alex Sharp. See the MIT-LICENSE file for full
+copyright information.
