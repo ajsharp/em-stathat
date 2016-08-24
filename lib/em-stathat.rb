@@ -3,7 +3,7 @@ require 'em-http'
 
 module EventMachine
   class StatHat
-    Config = Struct.new(:ukey, :email, :debug)
+    Config = Struct.new(:ukey, :email, :debug, :test)
     @@config = Config.new
 
     class << self
@@ -28,8 +28,10 @@ module EventMachine
     end
 
     def initialize(base_uri = 'http://api.stathat.com')
-      raise(RuntimeError, "You must configure EM::StatHat before using it!") unless self.class.configured?
-      @base_uri = base_uri
+      unless config.test
+        raise(RuntimeError, "You must configure EM::StatHat before using it!") unless self.class.configured?
+        @base_uri = base_uri
+      end
     end
 
     def config; self.class.config; end
@@ -94,7 +96,9 @@ module EventMachine
 
     # Return a deferrable object
     def request(endpoint, opts)
-      EventMachine::HttpRequest.new(@base_uri + endpoint).post(:body => opts)
+      unless config.test
+        EventMachine::HttpRequest.new(@base_uri + endpoint).post(:body => opts)
+      end
     end
   end
 
